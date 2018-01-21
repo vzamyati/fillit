@@ -1,30 +1,27 @@
-CC = gcc
-C_FLAGS = -Wall -Werror -Wextra
+
+SRC = 	main.c \
+		valid.c \
+		ft_error.c \
+		ft_read_file.c \
+		ft_strnew.c \ 
+
+OBJ = $(SRC:.c=.o)
+
 NAME = fillit
 
-SRC_FILES = 
-
-OBJ = $(SRC: .c=.o)
-L_FLAGS = -L./libft -lft
-LIBFT = libft
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-.c.o: $(SRC_FILES)
-	$(CC) -c $(OBJ) -I./libft $(L_FLAGS) $(C_FLAGS) -o $@
-
-$(NAME): $(LIBFT) $(OBJ)
-	$(CC) $(OBJ) -I./libft $(L_FLAGS) $(C_FLAGS) -o $(NAME)
-
-$(LIBFT):
-	make -C ./libft all
+$(NAME): $(OBJ)
+	gcc -c $(FLAGS) $(SRC)
+	gcc -o $(NAME) $(OBJ)
 
 clean:
-	/bin/rm -f $(OBJ)
-	make -C ./libft clean
+	rm -rf $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
-	make -C ./libft fclean
+	rm -rf $(NAME)
 
 re: fclean all
+

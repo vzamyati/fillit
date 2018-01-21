@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/vzamyati/projects/fillit/fillit.h
+stdlib.h
+-
+unistd.h
+-
+stdio.h
+-
+libft/libft.h
+/Users/vzamyati/projects/fillit/libft/libft.h
+fcntl.h
+-
+
+/Users/vzamyati/projects/fillit/ft_error.c
+fillit.h
+/Users/vzamyati/projects/fillit/fillit.h
+
+/Users/vzamyati/projects/fillit/ft_read_file.c
+fillit.h
+/Users/vzamyati/projects/fillit/fillit.h
+
+/Users/vzamyati/projects/fillit/libft/libft.h
+stdlib.h
+-
+unistd.h
+-
+
+/Users/vzamyati/projects/fillit/main.c
+fillit.h
+/Users/vzamyati/projects/fillit/fillit.h
+
+/Users/vzamyati/projects/fillit/valid.c
+fillit.h
+/Users/vzamyati/projects/fillit/fillit.h
+
