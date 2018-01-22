@@ -6,75 +6,40 @@
 /*   By: vzamyati <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 19:06:49 by vzamyati          #+#    #+#             */
-/*   Updated: 2018/01/12 19:06:54 by vzamyati         ###   ########.fr       */
+/*   Updated: 2018/01/22 13:14:01 by eaptekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/*
- * проверка на касания # с соседними хешами на карте
- */
-
-int     ft_valid_connections(char *buf, int i)
+static int     ft_valid_conn(char *buf, int j)
 {
     int     touch;
-
-    touch = 0;
-    if (buf[i] == buf[i + 1]) // чек справа
-        touch++;
-    if (i != 0)
-        if (buf[i] == buf[i - 1]) // чек слева (если не на нулевой позиции)
-            touch++;
-    if (i < 15) // чек вниз (если не в последнем ряду)
-        if (buf[i] == buf[i + 5])
-            touch++;
-    if (i < 4) // чек вверх (если не в первом ряду)
-        if (buf[i] == buf[i - 5])
-            touch++;
-    return (touch);
-}
-
-/*
- * дальше делаем проверку на валидность самой тетраминки: суммарно каждая фигура
- * должна содержать в себе 4 #, каждый минимум 1 раз должен соприкасаться с еще
- * одним #, + каждая фигура должна содержать в себе минимум одно двойное касание
- */
-
-int     ft_valid_tetra(char *buf)
-{
-    int i;
-    int one_connect;
-    int double_connect;
+    int     i;
 
     i = 0;
-    one_connect = 0;
-    double_connect = 0;
-    while(buf[i]) {
-        if (buf[i] == '#') {
-            if (ft_valid_connections(buf, i) >= 1) // у # одно касание с другим #
-                one_connect++;
-            if (ft_valid_connections(buf, i) == 2) // у # два касания с другим #
-                double_connect++;
-            if (ft_valid_connections(buf, i) == 3) // у # три касания, значит это квадрат
-                return (1);
+    touch = 0;
+    while (buf[i + j] && i < 20)
+    {
+        if (buf[i + j] == '#')
+        {
+            if (buf[i + j] == buf[i + j + 1]) // чек справа
+                touch++;
+            if (i > 0 && (buf[i + j] == buf[i + j - 1])) // чек слева (если не на нулевой позиции)
+                touch++;
+            if (i < 15 && (buf[i + j] == buf[i + j + 5])) // чек вниз (если не в последнем ряду)
+                touch++;
+            if (i > 4 && (buf[i + j] == buf[i + j - 5])) // чек вверх (если не в первом ряду)
+                touch++;
         }
         i++;
     }
-    printf("one_connect =  %d\n", one_connect);
-    printf("double_connect =  %d\n", double_connect);
-    if (one_connect >= 2 && double_connect >= 1)
-        return (1);
-    return (0);
+    if (touch == 6 || touch == 8)
+        return (0);
+    return (1);
 }
 
-/*
- * самая первая проверка - чекаем на количество хешей, точек и переносов строки:
- * в одной правильной фигуре должно быть 4 хеша, 12 точек и 4(+1 разделяющий) \n
- * если фигура проходит - возвращаем true
- */
-
-int     ft_valid_general(char *buf)
+static int     ft_valid_symbol(char *buf, int j)
 {
     int dot;
     int hash;
@@ -85,9 +50,9 @@ int     ft_valid_general(char *buf)
     dot = 0;
     hash = 0;
     endl = 0;
-    while (buf[i] && i < 21)
+    while (buf[i + j] && i < 20)
     {
-        if (buf[i] != '.' && buf[i] != '#' && buf[i] != '\n')
+        if (buf[i + j] != '.' && buf[i + j] != '#' && buf[i + j] != '\n')
             ft_error();
         else if (buf[i] == '.')
             dot++;
@@ -97,13 +62,30 @@ int     ft_valid_general(char *buf)
             endl++;
         i++;
     }
-    printf("%d\n", dot);
-    printf("%d\n", hash);
-    printf("%d\n", endl);
-    if (dot == 12 && hash == 4)
-        if (ft_valid_tetra(buf)) {
-            printf("valid!");
+    if (dot == 12 && hash == 4 && endl == 4)
+        return (0);
+    return (1);
+}
+
+int     ft_valid(char *buf)
+{
+    int i;
+    int j;
+
+    i = 0;
+    j = 0;
+    while (buf[i + j])
+    {
+        if (ft_valid_conn(buf, j) || ft_valid_symbol(buf, j))
             return (1);
-        }
-    return 0;
+        if (buf[4 + j] == '\n' && buf[9 + j] == '\n' && buf[14 + j] == '\n'
+            && buf[19 + j] == '\n' && buf[20 + j] == '\0')
+            return (0);
+        if (buf[4 + j] == '\n' && buf[9 + j] == '\n' && buf[14 + j] == '\n'
+            && buf[19 + j] == '\n' && buf[20 + j] == '\n' && (buf[21 + j] == '.' || buf[21 + j] == '#'))
+            j += 21;
+        else
+            return (1);
+    }
+    return (0);
 }

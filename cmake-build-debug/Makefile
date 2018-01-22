@@ -123,6 +123,168 @@ fillit/fast:
 	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/build
 .PHONY : fillit/fast
 
+ft_bzero.o: ft_bzero.c.o
+
+.PHONY : ft_bzero.o
+
+# target to build an object file
+ft_bzero.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_bzero.c.o
+.PHONY : ft_bzero.c.o
+
+ft_bzero.i: ft_bzero.c.i
+
+.PHONY : ft_bzero.i
+
+# target to preprocess a source file
+ft_bzero.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_bzero.c.i
+.PHONY : ft_bzero.c.i
+
+ft_bzero.s: ft_bzero.c.s
+
+.PHONY : ft_bzero.s
+
+# target to generate assembly for a file
+ft_bzero.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_bzero.c.s
+.PHONY : ft_bzero.c.s
+
+ft_error.o: ft_error.c.o
+
+.PHONY : ft_error.o
+
+# target to build an object file
+ft_error.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_error.c.o
+.PHONY : ft_error.c.o
+
+ft_error.i: ft_error.c.i
+
+.PHONY : ft_error.i
+
+# target to preprocess a source file
+ft_error.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_error.c.i
+.PHONY : ft_error.c.i
+
+ft_error.s: ft_error.c.s
+
+.PHONY : ft_error.s
+
+# target to generate assembly for a file
+ft_error.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_error.c.s
+.PHONY : ft_error.c.s
+
+ft_read_file.o: ft_read_file.c.o
+
+.PHONY : ft_read_file.o
+
+# target to build an object file
+ft_read_file.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_read_file.c.o
+.PHONY : ft_read_file.c.o
+
+ft_read_file.i: ft_read_file.c.i
+
+.PHONY : ft_read_file.i
+
+# target to preprocess a source file
+ft_read_file.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_read_file.c.i
+.PHONY : ft_read_file.c.i
+
+ft_read_file.s: ft_read_file.c.s
+
+.PHONY : ft_read_file.s
+
+# target to generate assembly for a file
+ft_read_file.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_read_file.c.s
+.PHONY : ft_read_file.c.s
+
+ft_strnew.o: ft_strnew.c.o
+
+.PHONY : ft_strnew.o
+
+# target to build an object file
+ft_strnew.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_strnew.c.o
+.PHONY : ft_strnew.c.o
+
+ft_strnew.i: ft_strnew.c.i
+
+.PHONY : ft_strnew.i
+
+# target to preprocess a source file
+ft_strnew.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_strnew.c.i
+.PHONY : ft_strnew.c.i
+
+ft_strnew.s: ft_strnew.c.s
+
+.PHONY : ft_strnew.s
+
+# target to generate assembly for a file
+ft_strnew.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_strnew.c.s
+.PHONY : ft_strnew.c.s
+
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/main.c.s
+.PHONY : main.c.s
+
+valid.o: valid.c.o
+
+.PHONY : valid.o
+
+# target to build an object file
+valid.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/valid.c.o
+.PHONY : valid.c.o
+
+valid.i: valid.c.i
+
+.PHONY : valid.i
+
+# target to preprocess a source file
+valid.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/valid.c.i
+.PHONY : valid.c.i
+
+valid.s: valid.c.s
+
+.PHONY : valid.s
+
+# target to generate assembly for a file
+valid.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/valid.c.s
+.PHONY : valid.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +294,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fillit"
+	@echo "... ft_bzero.o"
+	@echo "... ft_bzero.i"
+	@echo "... ft_bzero.s"
+	@echo "... ft_error.o"
+	@echo "... ft_error.i"
+	@echo "... ft_error.s"
+	@echo "... ft_read_file.o"
+	@echo "... ft_read_file.i"
+	@echo "... ft_read_file.s"
+	@echo "... ft_strnew.o"
+	@echo "... ft_strnew.i"
+	@echo "... ft_strnew.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... valid.o"
+	@echo "... valid.i"
+	@echo "... valid.s"
 .PHONY : help
 
 

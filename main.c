@@ -6,7 +6,7 @@
 /*   By: vzamyati <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 09:07:19 by vzamyati          #+#    #+#             */
-/*   Updated: 2018/01/16 09:07:22 by vzamyati         ###   ########.fr       */
+/*   Updated: 2018/01/22 13:20:02 by eaptekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int     main(int ac, char **av)
 {
     if (ac == 2)
-        printf("%d\n", ft_valid_general(ft_read_file(av[1])));
+        printf("%s", ft_read_file(av[1]));
     else
-        ft_error(); // usage: !!!
+        write(1, "usage: ./fillit map_file\n", 25);
     return (0);
 }

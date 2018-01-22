@@ -16,6 +16,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/types.h>
+#include <sys/uio.h>
 
 #include <stdio.h>
 
@@ -27,10 +29,8 @@ typedef struct s_tetri
     struct s_tetri  *next;
 }               t_tetri;
 
-int		ft_valid_general(char *str); // первая проверка фигуры
+int		ft_valid(char *av); // первая проверка фигуры
 void    ft_error(void); // выводит error при невалидной карте
-int     ft_valid_connections(char *buf, int i); // количество косаний у # в этой позиции
-int     ft_valid_tetra(char *buf); // чекает валидность тетрамины по касаниям
 char    *ft_read_file(char *av); // считывание файла
 void	ft_bzero(void *s, size_t n);
 char	*ft_strnew(size_t size);
