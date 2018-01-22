@@ -6,14 +6,14 @@
 /*   By: vzamyati <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 08:36:03 by vzamyati          #+#    #+#             */
-/*   Updated: 2018/01/22 13:15:40 by eaptekar         ###   ########.fr       */
+/*   Updated: 2018/01/22 18:44:16 by vzamyati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void    ft_error(void)
+void	ft_error(void)
 {
-    write(1, "error\n", 6);
-    exit (1);
+	write(1, "error\n", 6);
+	exit(1);
 }

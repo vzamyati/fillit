@@ -12,11 +12,11 @@
 
 #include "fillit.h"
 
-int     main(int ac, char **av)
+int		main(int ac, char **av)
 {
-    if (ac == 2)
-        printf("%s", ft_read_file(av[1]));
-    else
-        write(1, "usage: ./fillit map_file\n", 25);
-    return (0);
+	if (ac == 2)
+		ft_putstr(ft_read_file(av[1]));
+	else
+		ft_putstr("usage: ./fillit map_file\n");
+	return (0);
 }
