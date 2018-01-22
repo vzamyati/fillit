@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_file.c                                     :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vzamyati <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eaptekar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/16 08:57:54 by vzamyati          #+#    #+#             */
-/*   Updated: 2018/01/22 12:50:56 by eaptekar         ###   ########.fr       */
+/*   Created: 2017/10/30 16:15:56 by eaptekar          #+#    #+#             */
+/*   Updated: 2018/01/22 12:45:40 by eaptekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/* char    **getting_map(char *str)
- {
-     int i;
-
-
-
- }
-*/
-char    *ft_read_file(char *av)
+void	ft_bzero(void *s, size_t n)
 {
-    int fd;
-    char *buf;
+	size_t i;
 
-    fd = open(av, O_RDONLY);
-    if (!(buf = ft_strnew(546)))
-        return (0);
-    read(fd, buf, 546);
-    close (fd);
-    return (buf);
+	i = 0;
+	if (n != 0)
+	{
+		while (i < n)
+		{
+			((unsigned char*)s)[i] = '\0';
+			i++;
+		}
+	}
 }

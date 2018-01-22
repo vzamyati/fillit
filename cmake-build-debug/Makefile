@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vzamyati/projects/fillit
+CMAKE_SOURCE_DIR = /Users/eaptekar/projects/fillit_working
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vzamyati/projects/fillit/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/eaptekar/projects/fillit_working/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vzamyati/projects/fillit/cmake-build-debug/CMakeFiles /Users/vzamyati/projects/fillit/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles /Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vzamyati/projects/fillit/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,114 +123,6 @@ fillit/fast:
 	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/build
 .PHONY : fillit/fast
 
-ft_error.o: ft_error.c.o
-
-.PHONY : ft_error.o
-
-# target to build an object file
-ft_error.c.o:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_error.c.o
-.PHONY : ft_error.c.o
-
-ft_error.i: ft_error.c.i
-
-.PHONY : ft_error.i
-
-# target to preprocess a source file
-ft_error.c.i:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_error.c.i
-.PHONY : ft_error.c.i
-
-ft_error.s: ft_error.c.s
-
-.PHONY : ft_error.s
-
-# target to generate assembly for a file
-ft_error.c.s:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_error.c.s
-.PHONY : ft_error.c.s
-
-ft_read_file.o: ft_read_file.c.o
-
-.PHONY : ft_read_file.o
-
-# target to build an object file
-ft_read_file.c.o:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_read_file.c.o
-.PHONY : ft_read_file.c.o
-
-ft_read_file.i: ft_read_file.c.i
-
-.PHONY : ft_read_file.i
-
-# target to preprocess a source file
-ft_read_file.c.i:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_read_file.c.i
-.PHONY : ft_read_file.c.i
-
-ft_read_file.s: ft_read_file.c.s
-
-.PHONY : ft_read_file.s
-
-# target to generate assembly for a file
-ft_read_file.c.s:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_read_file.c.s
-.PHONY : ft_read_file.c.s
-
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/main.c.s
-.PHONY : main.c.s
-
-valid.o: valid.c.o
-
-.PHONY : valid.o
-
-# target to build an object file
-valid.c.o:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/valid.c.o
-.PHONY : valid.c.o
-
-valid.i: valid.c.i
-
-.PHONY : valid.i
-
-# target to preprocess a source file
-valid.c.i:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/valid.c.i
-.PHONY : valid.c.i
-
-valid.s: valid.c.s
-
-.PHONY : valid.s
-
-# target to generate assembly for a file
-valid.c.s:
-	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/valid.c.s
-.PHONY : valid.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,18 +132,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fillit"
-	@echo "... ft_error.o"
-	@echo "... ft_error.i"
-	@echo "... ft_error.s"
-	@echo "... ft_read_file.o"
-	@echo "... ft_read_file.i"
-	@echo "... ft_read_file.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... valid.o"
-	@echo "... valid.i"
-	@echo "... valid.s"
 .PHONY : help
 
 

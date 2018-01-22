@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_file.c                                     :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vzamyati <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eaptekar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/16 08:57:54 by vzamyati          #+#    #+#             */
-/*   Updated: 2018/01/22 12:50:56 by eaptekar         ###   ########.fr       */
+/*   Created: 2017/11/18 18:30:49 by eaptekar          #+#    #+#             */
+/*   Updated: 2018/01/22 12:45:57 by eaptekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/* char    **getting_map(char *str)
- {
-     int i;
-
-
-
- }
-*/
-char    *ft_read_file(char *av)
+char	*ft_strnew(size_t size)
 {
-    int fd;
-    char *buf;
+	char *str;
 
-    fd = open(av, O_RDONLY);
-    if (!(buf = ft_strnew(546)))
-        return (0);
-    read(fd, buf, 546);
-    close (fd);
-    return (buf);
+	str = (char*)malloc(sizeof(char) * size + 1);
+	if (!str)
+		return (NULL);
+	ft_bzero((void*)str, size + 1);
+	return (str);
 }

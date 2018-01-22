@@ -1,9 +1,5 @@
 
-SRC = 	main.c \
-		valid.c \
-		ft_error.c \
-		ft_read_file.c \
-		ft_strnew.c \ 
+SRC = main.c valid.c ft_error.c ft_read_file.c ft_strnew.c ft_bzero.c
 
 OBJ = $(SRC:.c=.o)
 
