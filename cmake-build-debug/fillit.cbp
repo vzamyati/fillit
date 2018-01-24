@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/eaptekar/projects/fillit_working/cmake-build-debug"/>
+				<Option working_dir="/Users/vzamyati/projects/fillit-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/eaptekar/projects/fillit_working/cmake-build-debug"/>
+				<Option working_dir="/Users/vzamyati/projects/fillit-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/eaptekar/projects/fillit_working/cmake-build-debug"/>
+				<Option working_dir="/Users/vzamyati/projects/fillit-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fillit">
-				<Option output="/Users/eaptekar/projects/fillit_working/cmake-build-debug/fillit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/eaptekar/projects/fillit_working/cmake-build-debug"/>
+				<Option output="/Users/vzamyati/projects/fillit-master/cmake-build-debug/fillit" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/vzamyati/projects/fillit-master/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 fillit"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 fillit"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fillit/fast">
-				<Option output="/Users/eaptekar/projects/fillit_working/cmake-build-debug/fillit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/eaptekar/projects/fillit_working/cmake-build-debug"/>
+				<Option output="/Users/vzamyati/projects/fillit-master/cmake-build-debug/fillit" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/vzamyati/projects/fillit-master/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,35 +73,35 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 fillit/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eaptekar/projects/fillit_working/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 fillit/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vzamyati/projects/fillit-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/fillit.h">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/fillit.h">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/ft_bzero.c">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/ft_bzero.c">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/ft_error.c">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/ft_error.c">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/ft_read_file.c">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/ft_read_file.c">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/ft_strnew.c">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/ft_strnew.c">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/main.c">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/main.c">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/valid.c">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/valid.c">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/eaptekar/projects/fillit_working/CMakeLists.txt">
+		<Unit filename="/Users/vzamyati/projects/fillit-master/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

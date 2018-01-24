@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vzamyati <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eaptekar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/16 08:36:03 by vzamyati          #+#    #+#             */
-/*   Updated: 2018/01/22 13:15:40 by eaptekar         ###   ########.fr       */
+/*   Created: 2017/11/25 14:36:56 by eaptekar          #+#    #+#             */
+/*   Updated: 2017/11/25 22:39:56 by eaptekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void    ft_error(void)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-    write(1, "error\n", 6);
-    exit (1);
+	char	*sub;
+	size_t	i;
+
+	i = 0;
+	sub = (char*)malloc(sizeof(char) * len + 1);
+	if (sub && s)
+	{
+		while (len--)
+		{
+			sub[i] = s[start++];
+			i++;
+		}
+		sub[i] = '\0';
+		return (sub);
+	}
+	return (NULL);
 }

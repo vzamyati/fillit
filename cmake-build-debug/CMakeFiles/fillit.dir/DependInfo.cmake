@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/eaptekar/projects/fillit_working/ft_bzero.c" "/Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles/fillit.dir/ft_bzero.c.o"
-  "/Users/eaptekar/projects/fillit_working/ft_error.c" "/Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles/fillit.dir/ft_error.c.o"
-  "/Users/eaptekar/projects/fillit_working/ft_read_file.c" "/Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles/fillit.dir/ft_read_file.c.o"
-  "/Users/eaptekar/projects/fillit_working/ft_strnew.c" "/Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles/fillit.dir/ft_strnew.c.o"
-  "/Users/eaptekar/projects/fillit_working/main.c" "/Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles/fillit.dir/main.c.o"
-  "/Users/eaptekar/projects/fillit_working/valid.c" "/Users/eaptekar/projects/fillit_working/cmake-build-debug/CMakeFiles/fillit.dir/valid.c.o"
+  "/Users/vzamyati/projects/fillit-master/ft_bzero.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_bzero.c.o"
+  "/Users/vzamyati/projects/fillit-master/ft_error.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_error.c.o"
+  "/Users/vzamyati/projects/fillit-master/ft_read_file.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_read_file.c.o"
+  "/Users/vzamyati/projects/fillit-master/ft_strnew.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_strnew.c.o"
+  "/Users/vzamyati/projects/fillit-master/main.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/main.c.o"
+  "/Users/vzamyati/projects/fillit-master/valid.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/valid.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
