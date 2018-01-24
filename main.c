@@ -12,11 +12,18 @@
 
 #include "fillit.h"
 
-int		main(int ac, char **av)
+int     main(int ac, char **av)
 {
-	if (ac == 2)
-		ft_putstr(ft_read_file(av[1]));
-	else
-		ft_putstr("usage: ./fillit map_file\n");
-	return (0);
+    char    *buf;
+    t_tetri *list;
+
+    buf = ft_read_file(av[1]);
+    if (ac == 2)
+        printf("%s", buf);
+    else
+        write(1, "usage: ./fillit map_file\n", 25);
+    list = parse_tetri(buf);
+    print_list(list);
+    free(buf);
+    return (0);
 }
