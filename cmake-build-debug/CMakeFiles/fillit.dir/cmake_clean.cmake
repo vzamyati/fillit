@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/fillit.dir/main.c.o"
   "CMakeFiles/fillit.dir/ft_strnew.c.o"
   "CMakeFiles/fillit.dir/ft_bzero.c.o"
+  "CMakeFiles/fillit.dir/ft_strsub.c.o"
+  "CMakeFiles/fillit.dir/map.c.o"
+  "CMakeFiles/fillit.dir/solver.c.o"
+  "CMakeFiles/fillit.dir/print_list.c.o"
   "fillit.pdb"
   "fillit"
 )

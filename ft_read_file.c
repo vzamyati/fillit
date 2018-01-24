@@ -31,19 +31,18 @@ char        *ft_read_file(char *av)
     return (buf);
 }
 
-static int  count_blocks(char *buf)
-{
-    int nmb;
-    int i;
+int count_blocks(char *buf) {
+	int nmb;
+	int i;
 
-    nmb = 1;
-    i = 20;
-    while (buf[i] && buf[i] == '\n')
-    {
-        nmb++;
-        i += 21;
-    }
-    return (nmb);
+	nmb = 1;
+	i = 20;
+	while (buf[i] && buf[i] == '\n')
+	{
+		nmb++;
+		i += 21;
+	}
+	return (nmb);
 }
 
 static void    tetri_coord(t_tetri **tmp, char *buf, int nmb)
@@ -56,7 +55,7 @@ static void    tetri_coord(t_tetri **tmp, char *buf, int nmb)
     i = 0;
     j = 0;
     all = count_blocks(buf);
-    array = ft_strsub(buf, (all - nmb)*21, 20);
+    array = ft_strsub(buf, (unsigned int)(all - nmb) * 21, 20);
     while (i < 20)
     {
         if (array[i] == '#')  //записываем координаты тетрамины (x, y)
@@ -67,12 +66,36 @@ static void    tetri_coord(t_tetri **tmp, char *buf, int nmb)
         }
         i++;
     }
-    while (--j >= 0)    //нормировка на ноль, перемещаем тетрамины в верхний левый угол
-    {
-        (*tmp)->x[j] = (*tmp)->x[j] - (*tmp)->x[0];
-        (*tmp)->y[j] = (*tmp)->y[j] - (*tmp)->y[0];
-    }
     free(array);
+}
+
+static void     mod_coord(t_tetri **tmp)
+{
+	int     min_x;
+	int     min_y;
+	int     j;
+
+	j = 1;
+	min_x = (*tmp)->x[0];
+	min_y = (*tmp)->y[0];
+	while (j < 4)
+	{
+		if ((*tmp)->x[j] < min_x)
+			min_x = (*tmp)->x[j];
+		j++;
+	}
+	j = 1;
+	while (j < 4)
+	{
+		if ((*tmp)->y[j] < min_y)
+			min_y = (*tmp)->y[j];
+		j++;
+	}
+	while (--j >= 0) //нормировка координат
+	{
+		(*tmp)->x[j] = (*tmp)->x[j] - min_x;
+		(*tmp)->y[j] = (*tmp)->y[j] - min_y;
+	}
 }
 
 t_tetri     *parse_tetri(char *buf)
@@ -91,12 +114,13 @@ t_tetri     *parse_tetri(char *buf)
     {
         tmp->c = c;
         tetri_coord(&tmp, buf, nmb);
+	    mod_coord(&tmp);
         if (!(tmp->next = (t_tetri*)malloc(sizeof(t_tetri))))
             ft_error();
         tmp = tmp->next;
         c++;
         nmb--;
     }
-    tmp->next = NULL;
+    tmp = NULL;
     return (list);
 }

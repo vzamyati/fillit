@@ -89,3 +89,20 @@ int     ft_valid(char *buf)
     }
     return (0);
 }
+
+int     check_insert_tetri(t_tetri **list, char **map, int n)
+{
+    int i;
+    int j;
+
+    j = 0;
+    while (j < n)
+    {
+        i = 0;
+        while (i < n)
+        {
+            if ((*list)->x[i])
+                .......
+        }
+    }
+}

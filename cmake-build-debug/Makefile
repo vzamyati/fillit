@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vzamyati/projects/fillit-master
+CMAKE_SOURCE_DIR = /Users/eaptekar/projects/vzamyati
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vzamyati/projects/fillit-master/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/eaptekar/projects/vzamyati/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles /Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles /Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -231,6 +231,33 @@ ft_strnew.c.s:
 	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_strnew.c.s
 .PHONY : ft_strnew.c.s
 
+ft_strsub.o: ft_strsub.c.o
+
+.PHONY : ft_strsub.o
+
+# target to build an object file
+ft_strsub.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_strsub.c.o
+.PHONY : ft_strsub.c.o
+
+ft_strsub.i: ft_strsub.c.i
+
+.PHONY : ft_strsub.i
+
+# target to preprocess a source file
+ft_strsub.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_strsub.c.i
+.PHONY : ft_strsub.c.i
+
+ft_strsub.s: ft_strsub.c.s
+
+.PHONY : ft_strsub.s
+
+# target to generate assembly for a file
+ft_strsub.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/ft_strsub.c.s
+.PHONY : ft_strsub.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -257,6 +284,87 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/main.c.s
 .PHONY : main.c.s
+
+map.o: map.c.o
+
+.PHONY : map.o
+
+# target to build an object file
+map.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/map.c.o
+.PHONY : map.c.o
+
+map.i: map.c.i
+
+.PHONY : map.i
+
+# target to preprocess a source file
+map.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/map.c.i
+.PHONY : map.c.i
+
+map.s: map.c.s
+
+.PHONY : map.s
+
+# target to generate assembly for a file
+map.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/map.c.s
+.PHONY : map.c.s
+
+print_list.o: print_list.c.o
+
+.PHONY : print_list.o
+
+# target to build an object file
+print_list.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/print_list.c.o
+.PHONY : print_list.c.o
+
+print_list.i: print_list.c.i
+
+.PHONY : print_list.i
+
+# target to preprocess a source file
+print_list.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/print_list.c.i
+.PHONY : print_list.c.i
+
+print_list.s: print_list.c.s
+
+.PHONY : print_list.s
+
+# target to generate assembly for a file
+print_list.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/print_list.c.s
+.PHONY : print_list.c.s
+
+solver.o: solver.c.o
+
+.PHONY : solver.o
+
+# target to build an object file
+solver.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/solver.c.o
+.PHONY : solver.c.o
+
+solver.i: solver.c.i
+
+.PHONY : solver.i
+
+# target to preprocess a source file
+solver.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/solver.c.i
+.PHONY : solver.c.i
+
+solver.s: solver.c.s
+
+.PHONY : solver.s
+
+# target to generate assembly for a file
+solver.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/solver.c.s
+.PHONY : solver.c.s
 
 valid.o: valid.c.o
 
@@ -306,9 +414,21 @@ help:
 	@echo "... ft_strnew.o"
 	@echo "... ft_strnew.i"
 	@echo "... ft_strnew.s"
+	@echo "... ft_strsub.o"
+	@echo "... ft_strsub.i"
+	@echo "... ft_strsub.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... map.o"
+	@echo "... map.i"
+	@echo "... map.s"
+	@echo "... print_list.o"
+	@echo "... print_list.i"
+	@echo "... print_list.s"
+	@echo "... solver.o"
+	@echo "... solver.i"
+	@echo "... solver.s"
 	@echo "... valid.o"
 	@echo "... valid.i"
 	@echo "... valid.s"

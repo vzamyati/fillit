@@ -18,3 +18,15 @@ void	print_list(t_tetri *list)
         elem = elem->next;
     }
 }
+
+void    print_map(char **map)
+{
+	int j;
+
+	j = 0;
+	while (map[j])
+	{
+		printf("%s\n", map[j]);
+		j++;
+	}
+}

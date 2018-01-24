@@ -4,12 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/vzamyati/projects/fillit-master/ft_bzero.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_bzero.c.o"
-  "/Users/vzamyati/projects/fillit-master/ft_error.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_error.c.o"
-  "/Users/vzamyati/projects/fillit-master/ft_read_file.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_read_file.c.o"
-  "/Users/vzamyati/projects/fillit-master/ft_strnew.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/ft_strnew.c.o"
-  "/Users/vzamyati/projects/fillit-master/main.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/main.c.o"
-  "/Users/vzamyati/projects/fillit-master/valid.c" "/Users/vzamyati/projects/fillit-master/cmake-build-debug/CMakeFiles/fillit.dir/valid.c.o"
+  "/Users/eaptekar/projects/vzamyati/ft_bzero.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/ft_bzero.c.o"
+  "/Users/eaptekar/projects/vzamyati/ft_error.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/ft_error.c.o"
+  "/Users/eaptekar/projects/vzamyati/ft_read_file.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/ft_read_file.c.o"
+  "/Users/eaptekar/projects/vzamyati/ft_strnew.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/ft_strnew.c.o"
+  "/Users/eaptekar/projects/vzamyati/ft_strsub.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/ft_strsub.c.o"
+  "/Users/eaptekar/projects/vzamyati/main.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/main.c.o"
+  "/Users/eaptekar/projects/vzamyati/map.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/map.c.o"
+  "/Users/eaptekar/projects/vzamyati/print_list.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/print_list.c.o"
+  "/Users/eaptekar/projects/vzamyati/solver.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/solver.c.o"
+  "/Users/eaptekar/projects/vzamyati/valid.c" "/Users/eaptekar/projects/vzamyati/cmake-build-debug/CMakeFiles/fillit.dir/valid.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
