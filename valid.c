@@ -106,3 +106,52 @@ int     check_insert_tetri(t_tetri **list, char **map, int n)
         }
     }
 }
+
+char    **write_map(t_tetri *list, char **map, int n) //запись тетрамины - unchecked yet
+{
+    int i;
+    int j;
+    int count;
+
+    count = 0;
+    j = 0;
+    while (j < n)
+    {
+        i = 0;
+        while (i < n)
+        {
+            if(list->x[count] == i && list->y[count] == j)
+            {
+                map[j][i] == list->c;
+                count++;
+            }
+            i++;
+        }
+        map[j][i] = '\0';
+        j++;
+    }
+    map[j] = NULL;
+    return (map);
+}
+
+char    **clear_map(t_tetri *list, char **map, int n) //удаление тетрамины - unchecked yet
+{
+    int i;
+    int j;
+    int count;
+
+    count = 0;
+    j = 0;
+    while (j < n)
+    {
+        i = 0;
+        while (i < n)
+        {
+            if(map[j][i] == list->c;)
+                map[j][i] == '.';
+            i++;
+        }
+        j++;
+    }
+    return (map);
+}
