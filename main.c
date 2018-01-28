@@ -15,8 +15,8 @@
 int     main(int ac, char **av)
 {
     char    *buf;
-	char    **map;
 	int     nmb;
+
 	t_tetri *list;
 
     buf = ft_read_file(av[1]);
@@ -27,8 +27,7 @@ int     main(int ac, char **av)
     nmb = count_blocks(buf);
 	list = parse_tetri(buf);
 	print_list(list);
-    map = gen_map(nmb);
-	print_map(map);
+    solve_map(list, nmb);
     free(buf);
     return (0);
 }

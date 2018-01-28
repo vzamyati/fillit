@@ -90,68 +90,20 @@ int     ft_valid(char *buf)
     return (0);
 }
 
-int     check_insert_tetri(t_tetri **list, char **map, int n)
+int     check_insert_tetri(t_tetri *list, char **map, int n)
 {
-    int i;
-    int j;
-
-    j = 0;
-    while (j < n)
-    {
-        i = 0;
-        while (i < n)
-        {
-            if ((*list)->x[i])
-                .......
-        }
-    }
-}
-
-char    **write_map(t_tetri *list, char **map, int n) //запись тетрамины - unchecked yet
-{
-    int i;
-    int j;
     int count;
 
     count = 0;
-    j = 0;
-    while (j < n)
+    while (count < 4)
     {
-        i = 0;
-        while (i < n)
+        if (list->x[count] < n && list->y[count] < n &&
+                map[list->y[count]][list->x[count]] == '.')
         {
-            if(list->x[count] == i && list->y[count] == j)
-            {
-                map[j][i] == list->c;
-                count++;
-            }
-            i++;
+            if (count == 3)
+                return (0);
         }
-        map[j][i] = '\0';
-        j++;
+        count++;
     }
-    map[j] = NULL;
-    return (map);
-}
-
-char    **clear_map(t_tetri *list, char **map, int n) //удаление тетрамины - unchecked yet
-{
-    int i;
-    int j;
-    int count;
-
-    count = 0;
-    j = 0;
-    while (j < n)
-    {
-        i = 0;
-        while (i < n)
-        {
-            if(map[j][i] == list->c;)
-                map[j][i] == '.';
-            i++;
-        }
-        j++;
-    }
-    return (map);
+    return (1);
 }
