@@ -97,13 +97,16 @@ int     check_insert_tetri(t_tetri *list, char **map, int n)
     count = 0;
     while (count < 4)
     {
-        if (list->x[count] < n && list->y[count] < n &&
-                map[list->y[count]][list->x[count]] == '.')
+        if ((list->y[count] >= 0 && list->y[count] < n) &&
+                    (list->x[count] >= 0 && list->x[count]< n) &&
+                    map[list->y[count]][list->x[count]] == '.')
         {
-            if (count == 3)
+            count++;
+            if (count == 4)
                 return (0);
         }
-        count++;
+        else
+            break;
     }
     return (1);
 }
