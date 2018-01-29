@@ -7,6 +7,7 @@ void	print_list(t_tetri *list)
     int     j;
 
     elem = list;
+
     while(elem->next)
     {
         j = 0;

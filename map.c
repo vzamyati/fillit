@@ -8,7 +8,7 @@ int  size_map(int nmb)
 {
 	int n;
 
-	n = 4;
+	n = 2;
 	while (1)
 	{
 		if (nmb * 4 <= n * n)
@@ -64,7 +64,6 @@ char    **write_map(t_tetri *list, char **map, int n) //запись тетра�
 			}
 			i++;
 		}
-		map[j][i] = '\0';
 		j++;
 	}
 	map[j] = NULL;
