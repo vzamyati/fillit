@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 stdlib.h
 -
 unistd.h
@@ -20,45 +20,43 @@ sys/uio.h
 stdio.h
 -
 
-/Users/vzamyati/projects/fillit/ft_bzero.c
+/Users/eaptekar/projects/vzamyati/ft_bzero.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/ft_error.c
+/Users/eaptekar/projects/vzamyati/ft_error.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/ft_read_file.c
+/Users/eaptekar/projects/vzamyati/ft_read_file.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/ft_strnew.c
+/Users/eaptekar/projects/vzamyati/ft_strnew.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/ft_strsub.c
+/Users/eaptekar/projects/vzamyati/ft_strsub.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/main.c
+/Users/eaptekar/projects/vzamyati/main.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/map.c
+/Users/eaptekar/projects/vzamyati/map.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/print_list.c
+/Users/eaptekar/projects/vzamyati/print_list.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
-stdio.h
--
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/solver.c
+/Users/eaptekar/projects/vzamyati/solver.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 
-/Users/vzamyati/projects/fillit/valid.c
+/Users/eaptekar/projects/vzamyati/valid.c
 fillit.h
-/Users/vzamyati/projects/fillit/fillit.h
+/Users/eaptekar/projects/vzamyati/fillit.h
 

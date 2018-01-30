@@ -41,11 +41,12 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char                **gen_map(int n);
 int                 size_map(int nmb);
 int     			check_insert_tetri(t_tetri *list, char **map, int n);
-char    			**write_map(t_tetri *list, char **map, int n);
-char    			**clear_map(t_tetri *list, char **map, int n);
+char    			**write_tetri(t_tetri *list, char **map, int n);
+char    			**clear_tetri(t_tetri *list, char **map, int n);
 void    			solve_map(t_tetri *list, int nmb);
 
 void				print_list(t_tetri *list); // для проверки
+void                print_rev_list(t_tetri *list);
 void                print_map(char **map); //checking...
 
 #endif

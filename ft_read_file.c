@@ -31,12 +31,13 @@ char        *ft_read_file(char *av)
     return (buf);
 }
 
-int count_blocks(char *buf) {
+int count_blocks(char *buf)
+{
 	int nmb;
 	int i;
 
-	nmb = 1;
-	i = 20;
+	nmb = 0;
+	i = 19;
 	while (buf[i] && buf[i] == '\n')
 	{
 		nmb++;
@@ -103,6 +104,7 @@ t_tetri     *parse_tetri(char *buf)
     char    c;
     int     nmb;
     t_tetri *tmp;
+	t_tetri *temp;
     t_tetri *list;
 
     nmb = count_blocks(buf);
@@ -110,6 +112,8 @@ t_tetri     *parse_tetri(char *buf)
     if (!(list = (t_tetri*)malloc(sizeof(t_tetri))))
         ft_error();
     tmp = list;
+	temp = tmp;
+	tmp->prev = NULL;
     while (nmb > 0)
     {
         tmp->c = c;
@@ -118,9 +122,12 @@ t_tetri     *parse_tetri(char *buf)
         if (!(tmp->next = (t_tetri*)malloc(sizeof(t_tetri))))
             ft_error();
         tmp = tmp->next;
+	    tmp->prev = temp;
+	    temp->next = tmp;
+	    temp = tmp;
         c++;
         nmb--;
     }
-    tmp = NULL;
+    tmp->next = NULL;
     return (list);
 }

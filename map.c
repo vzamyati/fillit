@@ -24,7 +24,7 @@ char    **gen_map(int n)
 	char    **map;
 
 	j = 0;
-	if (!(map = (char**)malloc(sizeof(char*) * n + 1)))
+	if (!(map = (char**)malloc(sizeof(char*) * (n + 1))))
 		ft_error();
 	while (j < n)
 	{
@@ -44,7 +44,7 @@ char    **gen_map(int n)
 }
 
 
-char    **write_map(t_tetri *list, char **map, int n) //запись тетрамины - unchecked yet
+char    **write_tetri(t_tetri *list, char **map, int n) //запись тетрамины - unchecked yet
 {
 	int i;
 	int j;
@@ -70,7 +70,7 @@ char    **write_map(t_tetri *list, char **map, int n) //запись тетра�
 	return (map);
 }
 
-char    **clear_map(t_tetri *list, char **map, int n) //удаление тетрамины - unchecked yet
+char    **clear_tetri(t_tetri *list, char **map, int n) //удаление тетрамины - unchecked yet
 {
 	int i;
 	int j;
