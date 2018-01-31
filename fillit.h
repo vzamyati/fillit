@@ -13,40 +13,34 @@
 #ifndef FILLIT_H
 # define FILLIT_H
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/uio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
-#include <stdio.h>
-
-typedef struct 		s_tetri
+typedef struct		s_tetri
 {
 	int				x[4];
 	int				y[4];
 	char			c;
 	struct s_tetri	*next;
-    struct s_tetri  *prev;
 }					t_tetri;
 
-int					ft_valid(char *buf); // первая проверка фигуры
-void				ft_error(void); // выводит error при невалидной карте
-char				*ft_read_file(char *av); // считывание файла
-t_tetri 			*parse_tetri(char *buf); //запись фигур в список
-int                 count_blocks(char *buf);
-void				ft_bzero(void *s, size_t n);
+void				ft_putstr(const char *s);
+char				*ft_read_file(char *av);
+void				ft_error(void);
 char				*ft_strnew(size_t size);
+int					ft_valid(char *buf);
+int					count_blocks(char *buf);
+t_tetri				*parse_tetri(char *buf);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
-char                **gen_map(int n);
-int                 size_map(int nmb);
-int     			check_insert_tetri(t_tetri *list, char **map, int n);
-char    			**write_tetri(t_tetri *list, char **map, int n);
-char    			**clear_tetri(t_tetri *list, char **map, int n);
-void    			solve_map(t_tetri *list, int nmb);
-
-void				print_list(t_tetri *list); // для проверки
-void                print_rev_list(t_tetri *list);
-void                print_map(char **map); //checking...
+void				solve_map(t_tetri *list, int nmb);
+int					size_map(int nmb);
+char				**gen_map(int n);
+int					check_insert_tetri(t_tetri *list, char **map, int n);
+char				**write_tetri(t_tetri *list, char **map, int n);
+char				**clear_tetri(t_tetri *list, char **map, int n);
+void				print_map(char **map);
 
 #endif

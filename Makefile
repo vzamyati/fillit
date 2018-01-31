@@ -16,8 +16,7 @@ CC = gcc
 
 FLAGS = -Wall -Wextra -Werror -I.
 
-SRC = valid.c ft_error.c ft_read_file.c map.c ft_strnew.c \
-	  ft_bzero.c ft_strsub.c print_list.c solver.c
+SRC = valid.c ft_read_file.c map.c libfunctions.c solver.c
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -37,4 +36,3 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
-

@@ -12,21 +12,40 @@
 
 #include "fillit.h"
 
-int     main(int ac, char **av)
+void		ft_error(void)
 {
-    char    *buf;
-	int     nmb;
-	t_tetri *list;
+	ft_putstr("error");
+	exit(1);
+}
 
-    if (ac != 2)
+void		print_map(char **map)
+{
+	int		j;
+
+	j = 0;
+	while (map[j])
 	{
-        write(1, "usage: ./fillit map_file\n", 25);
+		ft_putstr(map[j]);
+		j++;
+	}
+}
+
+int			main(int ac, char **av)
+{
+	char	*buf;
+	int		nmb;
+	t_tetri	*list;
+
+	if (ac != 2)
+	{
+		ft_putstr("usage: ./fillit map_file");
 		return (1);
 	}
-    buf = ft_read_file(av[1]);
+	buf = ft_read_file(av[1]);
 	nmb = count_blocks(buf);
 	list = parse_tetri(buf);
-    solve_map(list, nmb);
-    free(buf);
-    return (0);
+	solve_map(list, nmb);
+	free(buf);
+	free(list);
+	return (0);
 }

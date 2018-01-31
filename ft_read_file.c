@@ -12,29 +12,31 @@
 
 #include "fillit.h"
 
-//need to free buf
-
-char        *ft_read_file(char *av)
+char		*ft_read_file(char *av)
 {
-    int     fd;
-    char    *buf;
+	int		fd;
+	int		i;
+	char	*buf;
 
-    fd = open(av, O_RDONLY);
-    if (fd == -1)
-        ft_error();
-    if (!(buf = ft_strnew(546)))
-        ft_error();
-    read(fd, buf, 546);
-    if (ft_valid(buf) == 1)
-        ft_error();
-    close (fd);
-    return (buf);
+	i = 0;
+	fd = open(av, O_RDONLY);
+	if (fd == -1)
+		ft_error();
+	if (!(buf = ft_strnew(546)))
+		ft_error();
+	read(fd, buf, 546);
+	while (buf[i])
+		i++;
+	if (ft_valid(buf) == 1 || i < 19)
+		ft_error();
+	close(fd);
+	return (buf);
 }
 
-int count_blocks(char *buf)
+int			count_blocks(char *buf)
 {
-	int nmb;
-	int i;
+	int		nmb;
+	int		i;
 
 	nmb = 0;
 	i = 19;
@@ -46,35 +48,35 @@ int count_blocks(char *buf)
 	return (nmb);
 }
 
-static void    tetri_coord(t_tetri **tmp, char *buf, int nmb)
+static void	tetri_coord(t_tetri **tmp, char *buf, int nmb)
 {
-    int     i;
-    int     j;
-    int     all;
-    char    *array;
+	int		i;
+	int		j;
+	int		all;
+	char	*array;
 
-    i = 0;
-    j = 0;
-    all = count_blocks(buf);
-    array = ft_strsub(buf, (unsigned int)(all - nmb) * 21, 20);
-    while (i < 20)
-    {
-        if (array[i] == '#')  //записываем координаты тетрамины (x, y)
-        {
-            (*tmp)->x[j] = i % 5;
-            (*tmp)->y[j] = i / 5;
-            j++;
-        }
-        i++;
-    }
-    free(array);
+	i = 0;
+	j = 0;
+	all = count_blocks(buf);
+	array = ft_strsub(buf, (unsigned int)(all - nmb) * 21, 20);
+	while (i < 20)
+	{
+		if (array[i] == '#')
+		{
+			(*tmp)->x[j] = i % 5;
+			(*tmp)->y[j] = i / 5;
+			j++;
+		}
+		i++;
+	}
+	free(array);
 }
 
-static void     mod_coord(t_tetri **tmp)
+static void	mod_coord(t_tetri **tmp)
 {
-	int     min_x;
-	int     min_y;
-	int     j;
+	int		min_x;
+	int		min_y;
+	int		j;
 
 	j = 1;
 	min_x = (*tmp)->x[0];
@@ -92,42 +94,36 @@ static void     mod_coord(t_tetri **tmp)
 			min_y = (*tmp)->y[j];
 		j++;
 	}
-	while (--j >= 0) //нормировка координат
+	while (--j >= 0)
 	{
 		(*tmp)->x[j] = (*tmp)->x[j] - min_x;
 		(*tmp)->y[j] = (*tmp)->y[j] - min_y;
 	}
 }
 
-t_tetri     *parse_tetri(char *buf)
+t_tetri		*parse_tetri(char *buf)
 {
-    char    c;
-    int     nmb;
-    t_tetri *tmp;
-	t_tetri *temp;
-    t_tetri *list;
+	char	c;
+	int		nmb;
+	t_tetri	*tmp;
+	t_tetri	*list;
 
-    nmb = count_blocks(buf);
-    c = 'A';
-    if (!(list = (t_tetri*)malloc(sizeof(t_tetri))))
-        ft_error();
-    tmp = list;
-	temp = tmp;
-	tmp->prev = NULL;
-    while (nmb > 0)
-    {
-        tmp->c = c;
-        tetri_coord(&tmp, buf, nmb);
-	    mod_coord(&tmp);
-        if (!(tmp->next = (t_tetri*)malloc(sizeof(t_tetri))))
-            ft_error();
-        tmp = tmp->next;
-	    tmp->prev = temp;
-	    temp->next = tmp;
-	    temp = tmp;
-        c++;
-        nmb--;
-    }
-    tmp->next = NULL;
-    return (list);
+	nmb = count_blocks(buf);
+	c = 'A';
+	if (!(list = (t_tetri*)malloc(sizeof(t_tetri))))
+		ft_error();
+	tmp = list;
+	while (nmb > 0)
+	{
+		tmp->c = c;
+		tetri_coord(&tmp, buf, nmb);
+		mod_coord(&tmp);
+		if (!(tmp->next = (t_tetri*)malloc(sizeof(t_tetri))))
+			ft_error();
+		tmp = tmp->next;
+		c++;
+		nmb--;
+	}
+	tmp->next = NULL;
+	return (list);
 }
